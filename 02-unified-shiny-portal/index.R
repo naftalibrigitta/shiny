@@ -5,14 +5,15 @@ library(shiny)
 library(shinyjs)
 library(glue)
 
+
 # load global parameters (DB connections, login credentials, etc)
-source('global.R') 
+source('password.R') 
 # load ui/server from each tab
 source('./00_tab_login/tab.R') 
 source('./01_tab_dashboard_01/tab.R')
 source('./02_tab_dashboard_02/tab.R')
 
-app.title <- 'An Unified Shiny Portal'
+app.title <- 'Portal'
 
 # ui (user interface)
 
