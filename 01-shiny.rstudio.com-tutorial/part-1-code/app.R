@@ -12,7 +12,7 @@ ui <- fluidPage(
     selectInput('ycol', 'Y Variable', names(iris),
       selected = names(iris)[[2]]),
     numericInput('clusters', 'Cluster count', 3,
-      min = 1, max = 9)
+      min = 1, max = 5)
   ),
   mainPanel(
     plotOutput('plot1')

@@ -21,8 +21,6 @@ ui <- navbarPage(
   id = 'tabs', 
   selected = 'Login to continue', 
   theme = 'main.css',              # defined in www/main.css
-  header = header,                 # defined in global.R
-  footer = footer,                 # defined in global.R
   useShinyjs(),                    # initiate javascript
   tab_login$ui,                    # ui for login page
   tab_01$ui,                       # ui for dashboard_01
