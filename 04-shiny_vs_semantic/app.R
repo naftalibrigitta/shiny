@@ -1,11 +1,11 @@
 library(shiny)
 library(shinydashboard)      # <-- Change this line to: library(semantic.dashboard)
-# library(semantic.dashboard)
+#library(semantic.dashboard)
 
 ui <- dashboardPage(
     dashboardHeader(title = "Basic dashboard"),
     dashboardSidebar(sidebarMenu(
-        menuItem(tabName = "home", text = "Home", icon = icon("home")),
+        menuItem(tabName = "home", text = "Halaman Utama", icon = icon("home")),
         menuItem(tabName = "Introduction", text = "Introduction", icon = icon("adn")),
         menuItem(tabName = "Raw Dataset", text = "Raw Dataset", icon = icon("database")),
         menuItem(tabName = "EDA", text = "EDA", icon = icon("chart-pie")),

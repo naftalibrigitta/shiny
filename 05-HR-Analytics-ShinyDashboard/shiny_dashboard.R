@@ -8,6 +8,8 @@ library(DT)
 library(DBI)
 #library(RMySQL)
 
+# for free icon visit here : https://fontawesome.com/icons/
+
 #uc<-dbConnect(MySQL(),user="root",
               #password="",dbname="bucky")
 #dat<-dbGetQuery(uc,"SELECT * FROM `table 2`")
@@ -21,17 +23,17 @@ ui<-dashboardPage(skin="blue",
                      menuItem("Raw Data", tabName = "raw", icon = icon("database")),
                      menuItem("Dashboard", tabName = "dash", icon = icon("bar-chart")),
                      menuItem("Attrition", tabName = "att", icon = icon("pie-chart")),
-                     menuItem("Predictive Model", tabName = "distance", icon = icon("question-circle"))
-                     #menuItem("Education", tabName = "education", icon = icon("mortar-board")),
-                     #menuItem("Gender", tabName = "gender", icon = icon("intersex")),
-                     #menuItem("Job-Satisfaction", tabName = "satisfaction", icon = icon("smile-o")),
-                     #menuItem("year_company", tabName = "year", icon = icon("handshake-o"))
+                     menuItem("Predictive Model", tabName = "distance", icon = icon("question-circle")),
+                     menuItem("Education", tabName = "education", icon = icon("mortar-board")),
+                     menuItem("Gender", tabName = "gender", icon = icon("intersex")),
+                     menuItem("Job-Satisfaction", tabName = "satisfaction", icon = icon("smile-o")),
+                     menuItem("year_company", tabName = "year", icon = icon("handshake-o"))
                      
                    )
   ),
   dashboardBody(
     tabItems(
-      tabItem(tabName = "raw",
+      tabItem(tabName = "year",
               fluidRow(box(width = 12,dataTableOutput("table"),title="Dataset"))
               ),
       tabItem(tabName = "dash",
@@ -75,6 +77,8 @@ ui<-dashboardPage(skin="blue",
     
   )
 )
+
+
 server<-function(input,output){
   
   output$table<-DT::renderDataTable({
