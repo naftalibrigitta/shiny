@@ -1,6 +1,3 @@
-rm(list = ls())
-gc()
-
 library(shiny)
 library(shinyjs)
 library(glue)
@@ -10,8 +7,8 @@ library(glue)
 source('password.R') 
 # load ui/server from each tab
 source('./00_tab_login/tab.R') 
-source('./01_tab_dashboard_01/tab.R')
-source('./02_tab_dashboard_02/tab.R')
+source('./01_tab_dash1/tab.R')
+source('./02_tab_dash2/tab.R')
 
 app.title <- 'Portal'
 
