@@ -3,19 +3,15 @@ library(shinyjs)
 library(glue)
 
 
-# load global parameters (DB connections, login credentials, etc)
+# load password
 source('password.R') 
-# load ui/server from each tab
-source('./00_tab_login/tab.R') 
-source('./01_tab_dash1/tab.R')
-source('./02_tab_dash2/tab.R')
 
-app.title <- 'Portal'
+
 
 # ui (user interface)
 
 ui <- navbarPage(
-  title = app.title, 
+  title = 'Home', 
   id = 'tabs', 
   selected = 'Login to continue', 
   theme = 'main.css',              # defined in www/main.css
